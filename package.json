@@ -1,0 +1,54 @@
+{
+  "name": "azure-ts-qs",
+  "version": "0.0.1",
+  "description": "Testing various functionality offered by 'Microsoft Azure'",
+  "main": "dist/main.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc --project tsconfig.json",
+    "lint": "tslint --config tslint.json --project tsconfig.json",
+    "format": "prettier --write \"**/*.ts\"",
+    "start": "ts-node -r tsconfig-paths/register main.ts",
+    "start:dev": "nodemon",
+    "prestart:prod": "rm -rf dist && tsc",
+    "start:prod": "node dist/main.js",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "full": "npm run clean && npm run build && npm run format && npm run lint && npm run start:dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezsnipes/nestynode-typeazurdo.git"
+  },
+  "author": "ez.snipes-",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/jest": "^22.2.2",
+    "@types/node": "^8.10.5",
+    "@types/supertest": "^2.0.4",
+    "jest": "^22.4.3",
+    "nodemon": "^1.17.3",
+    "prettier": "^1.11.1",
+    "supertest": "^3.0.0",
+    "ts-jest": "^22.4.2",
+    "ts-node": "^5.0.1",
+    "tsconfig-paths": "^3.2.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.1"
+  },
+  "dependencies": {
+    "@nest/testing": "^4.5.4",
+    "@nest/websockets": "^4.5.4",
+    "@nestjs/common": "^4.6.6",
+    "@nestjs/core": "^4.6.6",
+    "@nestjs/microservices": "^4.6.6",
+    "chalk": "^2.3.2",
+    "mongodb": "^3.0.6",
+    "mongoose": "^5.0.14",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^5.5.8",
+    "typeorm": "^0.1.20"
+  }
+}
