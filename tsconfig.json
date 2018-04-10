@@ -1,23 +1,23 @@
 {
   "compilerOptions": {
+    "moduleResolution": "node",
     "module": "commonjs",
     "declaration": false,
-    "noImplicitAny": true,
+    "noImplicitReturns": true,
     "removeComments": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "pretty": true,
     "esModuleInterop": true,
     "target": "es6",
     "sourceMap": true,
-    "allowJs": true,
     "outDir": "dist/",
     "baseUrl": "src/"
   },
-  "compileOnSave": false,
+  "compileOnSave": true,
   "include": [
-    "main.ts",
-    "src/**/**"
+    "src"
   ],
   "exclude": [
     "node_modules",
